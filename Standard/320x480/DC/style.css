@@ -1,0 +1,198 @@
+
+body, body * {
+  vertical-align: baseline;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 9pt;
+  color: #000000;
+}
+
+
+#preloadShapeCollapsed {
+    position: absolute;
+    width:318px;
+    height:48px;
+    left:0px;
+    top:0px;
+    background: black;
+    cursor: pointer;
+    z-index: 700;
+    display: block;
+    overflow: hidden;
+}
+#preloadShapeExpanded {
+    position: absolute;
+    width: 318px;
+    height: 478px;
+    left:0px;
+    top:0px;
+    background: black;
+    cursor: pointer;
+    z-index: 700;
+    display: block;
+    overflow: hidden;
+}
+.circle {
+    border: 5px solid #2741b6;
+    border-bottom-color: #c0ccf6;
+    border-radius: 50%;
+    height: 20px;
+    left: 50%;
+    margin-left: -12.5px;
+    margin-top: -15px;
+    position: absolute;
+    top: 50%;
+    transition: all 0.7s ease-in-out;
+    animation: spin 0.5s linear infinite;
+    width: 20px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#main-container {
+  position: absolute;
+  width: 320px;
+  height: 480px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+}
+
+#collapsed-state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 50px;
+  z-index: 100;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  background-color: #EEE;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+#expanded-state {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-color: #F1F1F1;
+  z-index: 200;
+  border: 1px solid black;
+  display: none;
+}
+
+#expanded-exit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  /* IE10 needs a background color otherwise he won't capture clicks */
+  background-color: #FFF;
+  opacity: 0;
+  z-index: 701;
+  display: none;
+}
+
+#collapsed-exit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  /* IE10 needs a background color otherwise he won't capture clicks */
+  background-color: #FFF;
+  opacity: 0;
+  z-index: 701;
+  display: none;
+}
+
+.button {
+  position: absolute;
+  color: #FFF;
+  background-color: #339933;
+  border: 1px outset #333;
+  cursor: pointer;
+  padding: 5px 10px;
+  z-index: 500;
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+}
+
+#expand-button {
+  bottom: 5px;
+  right: 5px;
+  display: none;
+  z-index: 702;
+}
+
+#collapse-button {
+  top: 5px;
+  left: 5px;
+  display: none;
+  z-index: 702;
+}
+
+.feature-collapsed {
+  top: 0px;
+  left: 0px;
+  width: 320px;
+  height: 50px;
+  position: absolute;
+}
+
+.feature-expanded {
+  top: 0px;
+  left: 0px;
+  width: 320px;
+  height: 480px;
+  position: absolute;
+}
+
+#main-img-0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(dclk.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+#main-img-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(dclk.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+:focus {
+  outline:none;
+}
+::-moz-focus-inner {
+  border:0;
+}

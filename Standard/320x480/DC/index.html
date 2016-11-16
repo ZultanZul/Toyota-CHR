@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta data-template-name="Template_H5T_expanding-320x50-image">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+  <script type="text/javascript" src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script>
+</head>
+<body>
+    <div id="main-container">
+      <!-- Collapsed Conent -->
+      <div id="collapsed-state">
+        <div id="collapsed-exit"></div>
+
+        <div id="preloadShapeCollapsed">
+          <div class="circle"></div>
+        </div>
+
+        <div class="feature-collapsed" id="feature-collapsed">
+          <div id="main-img-0"></div>
+        </div>
+
+
+        <div id="expand-button" class="button">
+          Click to expand
+        </div>
+
+
+
+      </div>
+
+      <!-- Expand Content -->
+      <div id="expanded-state">
+        <div id="expanded-exit"></div>
+        <div id="collapse-button" class="button">X Close Expanded</div>
+        
+        <div id="preloadShapeExpanded">
+          <div class="circle"></div>
+        </div>
+        
+        <div class="feature-expanded" id="feature-expanded">
+          <div id="main-img-1"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+  Enabler.setExpandingPixelOffsets(0, 0, 320, 480);
+    </script>
+
+  <script src="logic.js"></script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+
+body, body * {
+  vertical-align: baseline;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 9pt;
+  color: #000;
+  overflow: hidden;
+}
+
+#preloadShape {
+    position: absolute;
+    width:158px;
+    height:598px;
+    left:0px;
+    top:0px;
+    background: black;
+    cursor: pointer;
+    z-index: 700;
+    display: block;
+    overflow: hidden;
+    border: 1px solid black;
+}
+#preloadShape  .circle {
+    border: 5px solid #2741b6;
+    border-bottom-color: #c0ccf6;
+    border-radius: 50%;
+    height: 20px;
+    left: 50%;
+    margin-left: -12.5px;
+    margin-top: -12.5px;
+    position: absolute;
+    top: 50%;
+    transition: all 0.7s ease-in-out;
+    animation: spin 0.5s linear infinite;
+    width: 20px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+#mainContainer {
+  cursor: pointer;
+  position: absolute;
+  width: 160px;
+  height: 600px;
+  background-color: #000000;
+  overflow: hidden;
+
+}
+
+#border {
+  position:absolute;
+  width:158px;
+  height:598px;
+  left:0px;
+  top:0px;
+  border:1px solid #000000;
+  z-index:701;
+  cursor:pointer;
+}
+
+#clickBtn {
+  width:158px;
+  height:598px;
+  position: absolute;
+  top:0;
+  left: 0;
+  cursor: pointer;
+}
+
+#logo {
+
+    background-image: url("images/toyota-logo.png");
+    width: 160px;
+    height: 600px;
+    display: block;
+    position: absolute;
+    z-index: 50;
+    top:0;
+    left:0;
+}
+
+#CHR-logo-container {
+    width: 160px;
+    height: 600px;
+    position: relative;
+    display: block;
+    top: 0px;
+    left: 0px;
+
+}
+
+#CHR-car {
+    position: absolute;
+    display: block;
+    left: -30px;
+    width: 224px;
+    height: 600px;
+    opacity: 0;
+    will-change: transform;
+}
+
+#CHR-logo {
+    position: absolute;
+    width: 160px;
+    height: 600px;
+    display: block;    
+    top: 0;
+    left:0;
+    opacity: 0;
+}
+#CHR-logo-IMG {
+
+}
+
+#CHR-headline {
+    width: 160px;
+    height: 600px;
+    display: block;
+    top: 0;
+    left:0;
+    position: absolute;
+    opacity: 0;
+    will-change: transform;    
+}
+
+#endFrameImg {
+    position: absolute;
+    width: 160px;
+    height: 600px;
+    display: block;
+    top: 0;
+    right:0;
+    background-image: url("images/endFrame.jpg");
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+#cta {
+    background-image: url("images/cta.png");
+    position: absolute;
+    width: 138px;
+    height: 34px;
+    bottom: 40px;
+    left:10px;
+    opacity: 0;
+    border: 1px solid #ffffff;
+    z-index: 98;
+    cursor: pointer;
+    display: block;
+}
+
+#copy-1 {
+    background-image: url("images/copy-1.png");
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 160px;
+    height: 600px;
+    opacity: 0;
+    display: block;
+}
+#copy-2 {
+    background-image: url("images/copy-2.png");
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 160px;
+    height: 600px;
+    opacity: 0;
+    display: block;
+}
+#copy-3 {
+    background-image: url("images/copy-3.png");
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 160px;
+    height: 600px;
+    opacity: 0;
+    display: block;
+}
+
+#flowLineContainer1 {
+    position: absolute;
+    top: 180px;
+    left: -170px;
+    overflow: hidden;
+    width: 500px;
+    height: 200px;
+    background-image: url("images/flowline3.png");
+    background-repeat: none;
+    background-position: 0 0;
+    display: block;
+    z-index: 45;
+    opacity: 1.0;
+}
+
+#flowLineContainer2 {
+    position: absolute;
+    top: 215px;
+    left: 0px;
+    overflow: hidden;
+    transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    width: 500px;
+    height: 200px;
+    background-image: url("images/flowline3.png");
+    background-repeat: none;
+    background-position: 0 0;
+    display: block;
+    z-index: 45;
+    opacity: 1.0;
+}
+#flowLineContainer3 {
+    position: absolute;
+    top: 220px;
+    left: -160px;
+    overflow: hidden;
+    width: 500px;
+    height: 200px;
+    background-image: url("images/flowline3.png");
+    background-repeat: none;
+    background-position: 0 0;
+    display: block;
+    z-index: 45;
+    opacity: 1.0;
+}
+
+#flowLineContainer4 {
+    position: absolute;
+    top: 195px;
+    left: -160px;
+    overflow: hidden;
+    width: 500px;
+    height: 200px;
+    background-image: url("images/flowline3.png");
+    background-repeat: none;
+    background-position: 0 0;
+    display: block;
+    z-index: 45;
+    opacity: 1.0;
+}
+
+#flowLineContainer5 {
+    position: absolute;
+    top: 207px;
+    left: -160px;
+    overflow: hidden;
+    width: 500px;
+    height: 200px;
+    background-image: url("images/flowline3.png");
+    background-repeat: none;
+    background-position: 0 0;
+    display: block;
+    z-index: 45;
+    opacity: 1.0;
+}
+#flowLineContainer6 {
+    position: absolute;
+    top: 220px;
+    left: -160px;
+    overflow: hidden;
+    width: 500px;
+    height: 200px;
+    background-image: url("images/flowline3.png");
+    background-repeat: none;
+    background-position: 0 0;
+    display: block;
+    z-index: 45;
+    opacity: 1.0;
+}
+
+
+
+:focus {
+  outline:none;
+}
+::-moz-focus-inner {
+  border:0;
+}
