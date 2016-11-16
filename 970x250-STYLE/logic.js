@@ -28,6 +28,19 @@ function setupDom() {
   creative.dom.preloadShape = document.getElementById('preloadShape');
   creative.dom.exit = document.getElementById('exit');
   creative.dom.chrLogo= document.getElementById('chrLogo');
+  creative.dom.cta= document.getElementById('cta');
+
+  var ctaHovered = false;
+  var ctaHover = function(){
+      if(ctaHovered){
+          TweenMax.to(creative.dom.cta, 0.3,{borderColor: '#ffffff' ,ease:Power1.easeOut})
+      } else {
+          TweenMax.to(creative.dom.cta, 0.6,{borderColor: '#4c6be3' ,ease:Power1.easeOut})
+      }
+      ctaHovered = !ctaHovered;
+  };
+  creative.dom.exit.addEventListener('mouseover', ctaHover, false);
+  creative.dom.exit.addEventListener('mouseout', ctaHover, false);
 
   creative.dom.video0 = {};
   creative.dom.video0.vidContainer = document.getElementById('video-container-0');
@@ -99,9 +112,9 @@ function animStart() {
 
   tl = new TimelineMax({paused:false});
 
-    tl.addLabel('endFrame', 15.5)        
+    tl.addLabel('endFrame', 14.5)        
 
-      //.to(creative.dom.chrLogo, 0.5, {autoAlpha:1, ease: Linear.easeNone}, 'endFrame')
+      .to(creative.dom.cta, 0.5, {autoAlpha:1, ease: Linear.easeNone}, 'endFrame')
 }
 
 
@@ -110,7 +123,7 @@ function exitClickHandler() {
   // Reset video
   creative.dom.video0.vid.pause();
   if (creative.dom.video0.vid.readyState > 0) {
-    creative.dom.video0.vid.currentTime = 20;
+    creative.dom.video0.vid.currentTime = 15.3;
   }
   Enabler.exit('BackgroundExit');
 }
@@ -134,7 +147,7 @@ function startMuted0(e) {
  * Handler triggered when the video has finished playing.
  */
 function videoEndHandler0(e) {
-  creative.dom.video0.vid.currentTime = 19.9;
+  creative.dom.video0.vid.currentTime = 15.3;
   creative.dom.video0.vid.pause();
   creative.isClick0 = true;
 }
