@@ -112,7 +112,7 @@ function animStart() {
 
   tl = new TimelineMax({paused:false});
 
-    tl.addLabel('endFrame', 14.5)        
+    tl.addLabel('endFrame', 18)        
 
       .to(creative.dom.cta, 0.5, {autoAlpha:1, ease: Linear.easeNone}, 'endFrame')
 }
@@ -123,7 +123,7 @@ function exitClickHandler() {
   // Reset video
   creative.dom.video0.vid.pause();
   if (creative.dom.video0.vid.readyState > 0) {
-    creative.dom.video0.vid.currentTime = 15.3;
+    creative.dom.video0.vid.currentTime = 18.5;
   }
   Enabler.exit('BackgroundExit');
 }
@@ -147,7 +147,7 @@ function startMuted0(e) {
  * Handler triggered when the video has finished playing.
  */
 function videoEndHandler0(e) {
-  creative.dom.video0.vid.currentTime = 15.3;
+  creative.dom.video0.vid.currentTime = 19;
   creative.dom.video0.vid.pause();
   creative.isClick0 = true;
 }
