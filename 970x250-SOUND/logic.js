@@ -54,6 +54,7 @@ function init() {
   // autoplay although it won't work on iOS.
   creative.autoplay0 = false;
   creative.isClick0 = false;
+  creative.isCtaVisible = false;
 
   // Hide mute / unmute on iOS.
   if ((navigator.userAgent.match(/iPhone/i)) ||
@@ -129,7 +130,7 @@ function exitClickHandler() {
   // Reset video
   creative.dom.video0.vid.pause();
   if (creative.dom.video0.vid.readyState > 0) {
-    creative.dom.video0.vid.currentTime = 22;
+    creative.dom.video0.vid.currentTime = 19;
   }
   creative.tl.seek(creative.tl.totalDuration());
   Enabler.exit('BackgroundExit');
@@ -155,7 +156,7 @@ function startMuted0(e) {
  * Handler triggered when the video has finished playing.
  */
 function videoEndHandler0(e) {
-  creative.dom.video0.vid.currentTime = 22;
+  creative.dom.video0.vid.currentTime = 19;
   creative.dom.video0.vid.pause();
   creative.isClick0 = true;
 }
@@ -165,6 +166,11 @@ function videoEndHandler0(e) {
  */
 function videoTimeUpdateHandler0(e) {
  var perc = creative.dom.video0.vid.currentTime / creative.dom.video0.vid.duration;
+ var currentTime = creative.dom.video0.vid.currentTime;
+ if (currentTime > 13 && !creative.isCtaVisible) {
+   creative.isCtaVisible = true;
+   creative.tl.play('endFrame');
+ }
 }
 
 /**
@@ -193,15 +199,17 @@ function addVideoTracking0() {
 
 function animStart() {
 
-  creative.dom.video0.vid.play();
+  
 
-  creative.tl = new TimelineMax({paused:false});
+  creative.tl = new TimelineMax({
+    paused:false,
+    onStart: function() {
+      creative.dom.video0.vid.play();
+    }
+  });
 
-    creative.tl.to(creative.dom.preloadShape, .3, {alpha:0})
-     
-
-    .addLabel('endFrame', 14)  
-
+  creative.tl.to(creative.dom.preloadShape, .3, {alpha:0})
+    .addPause()
     .to(creative.dom.cta, 0.5, {autoAlpha:1, ease: Linear.easeNone}, 'endFrame')
 
 }

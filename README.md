@@ -1,2 +1,7 @@
-# Toyota-CHR
-4 Standard Formats with 3 Rich Video Formats
+# README #
+
+4 standard Formats 
+3 Rich Formats
+
+
+
